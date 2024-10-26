@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
-const db = require('./public/db_config'); 
+const db = require('./db_config'); 
 const path = require('path');
 
 const app = express();
