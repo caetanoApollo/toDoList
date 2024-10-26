@@ -141,3 +141,38 @@ button:hover {
     text-decoration: line-through; /* Risca a tarefa quando completada */
     color: gray; /* Cor da tarefa completada */
 }
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input, button {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .add-task-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .tasks-list li {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .logout-btn {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
