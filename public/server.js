@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt');
-const session = require('express-session');
-const db = require('./db_config');
 const path = require('path');
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
+const db = require('./db_config');
+
+const sessionStore = new MySQLStore({}, db);
 
 const app = express();
 const PORT = 3333;
@@ -240,6 +243,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'src')));
 
 app.use(session({
+    store: sessionStore,
     secret: '904200',
     resave: false,
     saveUninitialized: false,
