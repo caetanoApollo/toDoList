@@ -1,0 +1,143 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, button {
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+#user-auth{
+    display: flex;
+    flex-direction: column;
+}
+
+.add-task-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #007bff;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    display: none; /* Escondido até que o usuário faça login */
+    transition: transform 0.3s ease;
+}
+
+.add-task-btn:hover {
+    transform: scale(1.1);
+}
+
+.tasks-list {
+    list-style: none;
+    padding: 0;
+}
+
+.tasks-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tasks-list li.completed .task-text {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.task-checkbox {
+    margin-right: 10px;
+    transform: scale(1.5);
+    accent-color: #28a745;
+}
+
+.logout-btn {
+    margin-top: 20px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between; /* Para separar os dois grupos */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 10px; /* Espaço entre as tarefas */
+}
+
+.task-content {
+    display: flex;
+    align-items: center; /* Alinha checkbox e texto */
+}
+
+.icon-container {
+    display: flex;
+    gap: 10px; /* Espaço entre os botões */
+}
+
+.button-container {
+    display: flex;
+    gap: 5px;
+}
+
+.edit-button, .delete-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%; /* Arredonda os botões */
+    transition: background-color 0.3s; /* Animação de transição */
+}
+
+.edit-button:hover, .delete-button:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+.task-checkbox {
+    margin-right: 10px; /* Espaço entre o checkbox e o texto da tarefa */
+}
+
+.completed {
+    text-decoration: line-through; /* Risca a tarefa quando completada */
+    color: gray; /* Cor da tarefa completada */
+}
