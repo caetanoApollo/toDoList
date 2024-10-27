@@ -266,7 +266,7 @@ app.get('/', (req, res) => {
 });
 
 // Rotas de Autenticação
-app.get('/login', (req, res) => {
+app.post('/login', (req, res) => {
     const { email, password } = req.body;
     const query = 'SELECT * FROM usuarios WHERE email = ?';
 
